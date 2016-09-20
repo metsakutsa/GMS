@@ -7,6 +7,13 @@ if (DASH) {
     alarm[0] = room_speed / 6;
 }
 
+if (ATTACK) {
+    image_index = 0;
+    state = scr_attack_state;
+    
+}
+
+
 //Get the axis
 var xaxis = (MOVERIGHT - MOVELEFT);
 var yaxis = (MOVEDOWN - MOVEUP);
