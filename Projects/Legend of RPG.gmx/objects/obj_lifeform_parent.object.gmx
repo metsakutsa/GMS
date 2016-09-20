@@ -27,6 +27,9 @@
             <kind>1</kind>
             <string>///Initialize lifeform
 phy_fixed_rotation = true;
+
+// Base HP for a lifeform
+hp = 3;
 </string>
           </argument>
         </arguments>
@@ -50,7 +53,11 @@ phy_fixed_rotation = true;
           <argument>
             <kind>1</kind>
             <string>/// Control depth
-dept = -y;
+depth = -y;
+
+if (hp &lt; 0 ) {
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>
