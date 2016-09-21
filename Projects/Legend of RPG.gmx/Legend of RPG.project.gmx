@@ -20,6 +20,7 @@
       <sprite>sprites\spr_player_attack_right</sprite>
     </sprites>
     <sprite>sprites\spr_damage</sprite>
+    <sprite>sprites\spr_expr</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
@@ -37,6 +38,7 @@
     </scripts>
     <scripts name="Enemy">
       <script>scripts\scr_enemy_idle_state.gml</script>
+      <script>scripts\scr_enemy_stall_state.gml</script>
       <script>scripts\scr_enemy_wander_state.gml</script>
       <script>scripts\scr_enemy_chase_state.gml</script>
       <scripts name="Helper">
@@ -53,6 +55,8 @@
     <object>objects\obj_enemy_slime</object>
     <object>objects\obj_lifeform_parent</object>
     <object>objects\obj_damage</object>
+    <object>objects\obj_player_stats</object>
+    <object>objects\obj_experience</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_one</room>

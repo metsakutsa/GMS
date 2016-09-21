@@ -44,5 +44,6 @@ if (image_index >= 3 and attacked == false) {
 
     var damage = instance_create(xx, yy, obj_damage);
     damage.creator = id;
+    damage.damage = obj_player_stats.attack;
     attacked = true;
 }

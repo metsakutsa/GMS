@@ -1,6 +1,9 @@
 ///scr_dash_state
 
-//Set length of dash
+if (len == 0) {
+    dir = face*90;
+}
+
 len = spd*4;
 
 //Get the hspd and vspd
