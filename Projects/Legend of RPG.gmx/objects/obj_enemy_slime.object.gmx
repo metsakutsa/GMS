@@ -33,8 +33,8 @@ spd = .25;
 state = scr_enemy_idle_state;
 alarm[0] = room_speed*irandom_range(2,5);
 sight = 64;
-targetx = 0;
-targety = 0;
+xaxis = 0;
+yaxis = 0;
 </string>
           </argument>
         </arguments>
@@ -59,7 +59,14 @@ targety = 0;
             <kind>1</kind>
             <string>///Create experience point
 
-instance_create(x, y, obj_experience);
+var drop_spread = 6;
+
+instance_create(x + random_range(-drop_spread,drop_spread), y + random_range(-drop_spread,drop_spread), obj_experience);
+
+//Drop a health pack
+if (scr_chance(.5)){
+    instance_create(x + random_range(-drop_spread,drop_spread), y + random_range(-drop_spread,drop_spread), obj_health);
+}
 </string>
           </argument>
         </arguments>

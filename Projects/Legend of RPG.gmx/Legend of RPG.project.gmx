@@ -21,6 +21,17 @@
     </sprites>
     <sprite>sprites\spr_damage</sprite>
     <sprite>sprites\spr_expr</sprite>
+    <sprite>sprites\spr_health</sprite>
+    <sprite>sprites\spr_door</sprite>
+    <sprite>sprites\spr_sign</sprite>
+    <sprite>sprites\spr_dialog_box</sprite>
+    <sprite>sprites\sprite17</sprite>
+    <sprite>sprites\spr_chinlin_run_down</sprite>
+    <sprite>sprites\spr_chinlin_run_right</sprite>
+    <sprite>sprites\spr_chinlin_run_up</sprite>
+    <sprite>sprites\spr_chinlin_stand_down</sprite>
+    <sprite>sprites\spr_chinlin_stand_right</sprite>
+    <sprite>sprites\spr_chinlin_stand_up</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
@@ -35,6 +46,7 @@
     <scripts name="Helper">
       <script>scripts\scr_get_face.gml</script>
       <script>scripts\scr_get_input.gml</script>
+      <script>scripts\scr_chance.gml</script>
     </scripts>
     <scripts name="Enemy">
       <script>scripts\scr_enemy_idle_state.gml</script>
@@ -44,8 +56,12 @@
       <scripts name="Helper">
         <script>scripts\scr_enemy_choose_next_state.gml</script>
         <script>scripts\scr_check_for_player.gml</script>
+        <script>scripts\scr_move_axis.gml</script>
       </scripts>
     </scripts>
+    <script>scripts\scr_string_copy_words.gml</script>
+    <script>scripts\scr_save_game.gml</script>
+    <script>scripts\scr_load_game.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
@@ -53,13 +69,24 @@
     <object>objects\obj_view</object>
     <object>objects\obj_dash_effect</object>
     <object>objects\obj_enemy_slime</object>
+    <object>objects\obj_enemy_chinlin</object>
     <object>objects\obj_lifeform_parent</object>
     <object>objects\obj_damage</object>
     <object>objects\obj_player_stats</object>
     <object>objects\obj_experience</object>
+    <object>objects\obj_health</object>
+    <object>objects\obj_door</object>
+    <object>objects\obj_speaker</object>
+    <object>objects\obj_dialog</object>
+    <object>objects\obj_sign</object>
+    <object>objects\obj_input</object>
+    <object>objects\obj_pause_menu</object>
+    <object>objects\obj_projectile</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_one</room>
+    <room>rooms\rm_two</room>
+    <room>rooms\rm_pause</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
