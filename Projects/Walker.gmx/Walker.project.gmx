@@ -21,8 +21,12 @@
   <scripts name="scripts">
     <scripts name="Helper">
       <script>scripts\scr_get_input.gml</script>
+      <script>scripts\scr_text.gml</script>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt</font>
+  </fonts>
   <objects name="objects">
     <objects name="Worldbuilding">
       <object>objects\obj_intro_floor</object>
@@ -40,6 +44,7 @@
       <object>objects\obj_character</object>
     </objects>
     <object>objects\obj_textbox</object>
+    <object>objects\obj_text</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_intro</room>
