@@ -4,7 +4,14 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sounds name="Menu">
+      <sound>sound\snd_menu_select</sound>
+      <sound>sound\snd_menu_back</sound>
+      <sound>sound\snd_menu_accept</sound>
+      <sound>sound\snd_menu_click</sound>
+    </sounds>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Worldbuilding">
       <sprite>sprites\spr_intro_floor</sprite>
@@ -15,6 +22,11 @@
     <sprites name="Characters">
       <sprite>sprites\spr_character_placeholder</sprite>
     </sprites>
+    <sprites name="GUI">
+      <sprite>sprites\spr_button_attack</sprite>
+      <sprite>sprites\spr_button</sprite>
+      <sprite>sprites\spr_frame</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -23,19 +35,22 @@
       <script>scripts\scr_get_input.gml</script>
       <script>scripts\scr_text.gml</script>
     </scripts>
+    <scripts name="States">
+      <scripts name="Player">
+        <script>scripts\state_player_idle.gml</script>
+        <script>scripts\state_player_attacking.gml</script>
+      </scripts>
+    </scripts>
+    <scripts name="GUI">
+      <script>scripts\scr_display_icon.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt</font>
   </fonts>
   <objects name="objects">
-    <objects name="Worldbuilding">
-      <object>objects\obj_intro_floor</object>
-    </objects>
     <objects name="Menu objects">
       <object>objects\obj_main_menu</object>
-    </objects>
-    <objects name="Interface">
-      <object>objects\obj_GUI</object>
     </objects>
     <objects name="Player">
       <object>objects\obj_player</object>
@@ -43,13 +58,25 @@
     <objects name="Characters">
       <object>objects\obj_character</object>
     </objects>
-    <object>objects\obj_textbox</object>
-    <object>objects\obj_text</object>
+    <objects name="GUI">
+      <object>objects\obj_text</object>
+      <object>objects\obj_textbox</object>
+      <object>objects\obj_interface</object>
+      <object>objects\obj_button</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_intro</room>
     <room>rooms\rm_main_menu</room>
   </rooms>
+  <constants number="6">
+    <constant name="MOVE">0</constant>
+    <constant name="SEARCH">1</constant>
+    <constant name="USE">2</constant>
+    <constant name="WORK">3</constant>
+    <constant name="ASK">4</constant>
+    <constant name="STUDY">5</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

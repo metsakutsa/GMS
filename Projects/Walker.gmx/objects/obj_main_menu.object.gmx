@@ -38,7 +38,7 @@ menu[4] = "Exit";
 spacing = 64;
 
 //Position of the currently selected entry
-cursor = 0;
+cursor = 1;
 </string>
           </argument>
         </arguments>
@@ -68,11 +68,13 @@ scr_get_input();
 
 //Movement
 if (KEY_UP == 1){
+    audio_play_sound(snd_menu_select, 0, 0);
     cursor --;
     if (cursor &lt; 0) {
         cursor = array_length_1d(menu) - 1;
     }
 } else if (KEY_DOWN == 1){
+    audio_play_sound(snd_menu_select, 0, 0);
     cursor ++;
     if (cursor &gt; array_length_1d(menu)-1) {
         cursor = 0;
@@ -80,6 +82,7 @@ if (KEY_UP == 1){
 }
 
 if (KEY_ACTION == 1) {
+    audio_play_sound(snd_menu_accept, 0, 0);
     switch(cursor){        
         case 0:
             //CONTINUE

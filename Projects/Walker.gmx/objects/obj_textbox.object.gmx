@@ -94,7 +94,6 @@ ds_list_destroy(start);
           <argument>
             <kind>1</kind>
             <string>///Draw the string and the box
-depth = -10;
 
 draw_set_colour(c_gray);
 draw_rectangle ( xpos, ypos, window_get_width()-1, window_get_height()-1, false );

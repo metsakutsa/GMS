@@ -9,7 +9,7 @@ with (txt) {
     padding = 16;
     maxlength = view_wview[0]; //The width of the view in the room
     text = argument0;
-    spd = argument1;
+    spd = argument1;    //This adjusts the speed that characters are displayed at as well as the speed of the fading effect
     font = fnt;
     
     text_length = string_length(text);
