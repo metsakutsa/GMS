@@ -27,7 +27,6 @@
             <kind>1</kind>
             <string>///Initalize interface object
 
-
 </string>
           </argument>
         </arguments>
@@ -73,8 +72,8 @@ if (KEY_LEFT == 1){
 if (KEY_ACTION == 1) {
     audio_play_sound(snd_menu_accept, 0, 0);
     switch(cursor){        
-        case 0:
-            //DO STH
+        case THINK:
+            
             break;
         
         case 1:
@@ -119,8 +118,10 @@ if (KEY_ACTION == 1) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>xpos = 0;
-ypos = window_get_height()-200;
+            <string>///Draw the interface
+
+xpos = 0;
+ypos = window_get_height()-window_get_height()/4;
 
 //Textbox
 draw_set_colour(c_gray);

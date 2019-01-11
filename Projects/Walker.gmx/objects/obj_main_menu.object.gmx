@@ -90,7 +90,7 @@ if (KEY_ACTION == 1) {
         
         case 1:
             //NEW GAME
-            room_goto(rm_intro);
+            room_goto(rm_town);
             break;
     
         case 2:

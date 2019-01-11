@@ -28,6 +28,23 @@
             <string>///Initialize player object
 state = state_player_idle;
 
+
+//Stats
+name = "";
+
+
+//SKILLS
+//Basic skills
+skill[0] = THINK;
+skill[1] = SPEAK;
+skill[2] = ACT;
+skill[3] = RUN;
+
+//Advanced skills
+skill[0,0] = DETECT;
+skill[1,0] = PEACE;
+skill[2,0] = STRENGTH;
+
 </string>
           </argument>
         </arguments>

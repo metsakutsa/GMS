@@ -21,19 +21,28 @@
     </sprites>
     <sprites name="Characters">
       <sprite>sprites\spr_character_placeholder</sprite>
+      <sprite>sprites\spr_moomin</sprite>
+      <sprite>sprites\spr_imp</sprite>
     </sprites>
     <sprites name="GUI">
-      <sprite>sprites\spr_button_attack</sprite>
       <sprite>sprites\spr_button</sprite>
       <sprite>sprites\spr_frame</sprite>
+      <sprite>sprites\spr_round_button</sprite>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_mist</background>
+    <background>background\bg_battle</background>
+    <background>background\bg_town</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Helper">
       <script>scripts\scr_get_input.gml</script>
       <script>scripts\scr_text.gml</script>
+      <script>scripts\scr_random_enemy.gml</script>
+      <script>scripts\scr_escape_battle.gml</script>
+      <script>scripts\scr_room0_enemy_spawn.gml</script>
     </scripts>
     <scripts name="States">
       <scripts name="Player">
@@ -57,25 +66,42 @@
     </objects>
     <objects name="Characters">
       <object>objects\obj_character</object>
+      <object>objects\obj_moomin</object>
+      <object>objects\obj_imp</object>
+      <object>objects\obj_enemy_parent</object>
     </objects>
     <objects name="GUI">
       <object>objects\obj_text</object>
       <object>objects\obj_textbox</object>
       <object>objects\obj_interface</object>
-      <object>objects\obj_button</object>
+      <object>objects\obj_button_parent</object>
+      <object>objects\obj_button_scout</object>
+      <object>objects\obj_button_run</object>
+      <object>objects\obj_map_button</object>
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_intro</room>
     <room>rooms\rm_main_menu</room>
+    <room>rooms\rm_town</room>
+    <room>rooms\room2</room>
+    <room>rooms\rm_intro</room>
+    <room>rooms\rm_tutorial</room>
   </rooms>
-  <constants number="6">
-    <constant name="MOVE">0</constant>
-    <constant name="SEARCH">1</constant>
-    <constant name="USE">2</constant>
-    <constant name="WORK">3</constant>
-    <constant name="ASK">4</constant>
-    <constant name="STUDY">5</constant>
+  <constants number="14">
+    <constant name="LEVELS">-</constant>
+    <constant name="TUTORIAL">5</constant>
+    <constant name="BABY">6</constant>
+    <constant name="SCHOOL_I">7</constant>
+    <constant name="SCHOOL_II">8</constant>
+    <constant name="SCHOOL_III">9</constant>
+    <constant name="UNIVERSITY">10</constant>
+    <constant name="MILITARY">11</constant>
+    <constant name="ROMANCE">12</constant>
+    <constant name="FAMILY">13</constant>
+    <constant name="FINALE">14</constant>
+    <constant name="ENEMIES">-</constant>
+    <constant name="MOOMIN">1</constant>
+    <constant name="IMP">2</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
