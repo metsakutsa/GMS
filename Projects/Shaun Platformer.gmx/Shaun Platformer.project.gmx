@@ -6,14 +6,36 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sPlayer</sprite>
-    <sprite>sprites\sWall</sprite>
+    <sprites name="Player">
+      <sprite>sprites\sPlayerA</sprite>
+      <sprite>sprites\sPlayer</sprite>
+      <sprite>sprites\sPlayerR</sprite>
+      <sprite>sprites\sShield</sprite>
+    </sprites>
+    <sprites name="Enemy">
+      <sprite>sprites\sEnemyR</sprite>
+      <sprite>sprites\sEnemyA</sprite>
+      <sprite>sprites\sEnemy</sprite>
+    </sprites>
+    <sprites name="Environment">
+      <sprite>sprites\sWall</sprite>
+      <sprite>sprites\sBullet</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
-    <object>objects\oPlayer</object>
-    <object>objects\oWall</object>
+    <objects name="Player">
+      <object>objects\oPlayer</object>
+      <object>objects\oShield</object>
+    </objects>
+    <objects name="Enemy">
+      <object>objects\oEnemy</object>
+    </objects>
+    <objects name="Environment">
+      <object>objects\oWall</object>
+      <object>objects\oBullet</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
